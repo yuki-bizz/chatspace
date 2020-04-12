@@ -25,42 +25,40 @@ Things you may want to cover:
 ## usersテーブル
 |Column|Type|Options|
 |------|----|-------|
-|name|string|null: false|
+|name|string|null: false, index: true|
 |email|string|null: false|
 |password|string|null: false|
 
 ### Association
-- has_many :groups
+- has_many :groups, through: :groupes_users
 - has_many :posts
 
 ## postsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|text|text|null: false|
-|image|file||
+|text|text||
+|image|string||
 |user_id|integer|null: false, foreign_key: true|
 |group_id|integer|null: false, foreign_key: true|
 
 ###Association
 - belongs_to :user
-- belongs_to :groups
+- belongs_to :group
 
 ## groupsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|group_name|text|null: false|
-|user_id|integer|null: false, foreign_key: true|
-|post_id|integer|null: false, foreign_key: true|
+|name|text|null: false|
 
 ###Association
-- belongs_to :posts
-- has_many :users
+- has_many :posts
+- has_many :users, through: :groups_users
 
 ## groups_usersテーブル
 |Column|Type|Options|
 |------|----|-------|
-|user_id|integer|null: false, foreign_key: true|
-|group_id|integer|null: false, foreign_key: true|
+|user|references|null: false, foreign_key: true|
+|group|references|null: false, foreign_key: true|
 
 ### Association
 - belongs_to :group
