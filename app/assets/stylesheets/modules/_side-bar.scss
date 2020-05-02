@@ -15,15 +15,14 @@
   display: flex;
   justify-content: space-between;
   line-height: 20px;
-  }
 
-    .top-items__name {
+    &__name {
       font-size: 16px;
       font-weight: bold;
       color: white;
     }
 
-    .top-items__icons {
+    &__icons {
       display: flex;
       margin: 0 0 0 auto;
       color: #ffffff;
@@ -32,6 +31,7 @@
           color: white;
         }
     }
+  }
 }
 
 .side-bar__group-list {
@@ -40,15 +40,15 @@
   height: calc( 100vh - 100px);
 }
 .group {
-  color: #ffffff
-}
+  color: #ffffff;
 
-.group__name {
-  font-size: 15px;
-  padding: 20px 0px 0px 20px;
-}
+  &__name {
+    font-size: 15px;
+    padding: 20px 0px 0px 20px;
+  }
 
-.group__message {
-  font-size: 11px;
-  padding: 5px 0px 40px 20px;
+  &__message {
+    font-size: 11px;
+    padding: 5px 0px 40px 20px;
+  }
 }

@@ -12,33 +12,32 @@
   border-bottom-width: 1px;
   border-bottom-style: solid;
   border-bottom-color: #eeeeee;
-}
 
-.main-header__left-box {
-  margin-top: 35px;
-}
+  &__left-box {
+    margin-top: 35px;
+  }
 
-.main-header__left-box__group-name {
-  color: #333333;
-  font-size: 20px;
-  margin-bottom: 15px;
-}
+  &__left-box__group-name {
+    color: #333333;
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
 
-.main-header__left-box__member {
-  font-size: 12px;
-  color: #999999;
-  display: flex;
-}
+  &__left-box__member {
+    font-size: 12px;
+    color: #999999;
+    display: flex;
+  }
 
-.main-header__left-box__member-name {
-  color: #999999;
-  display: flex;
-  font-size: 12px;
-}
+  &__left-box__member-name {
+    color: #999999;
+    display: flex;
+    font-size: 12px;
+  }
+} 
 
 .edit-btn {
   height: 40px;
-  //width: 72px;
   border: solid 1px;
   border-color: #38aef0;
   font-size: 16px;
@@ -58,29 +57,28 @@
 
 .message {
   padding-bottom: 46px;
-}
+  &__info {
+    display: flex;
+    margin-bottom: 12px;
+  }
+  &__info-name {
+    color: #333333;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 35px 0 12px 40px;
+  }
 
-.message__info {
-  display: flex;
-  margin-bottom: 12px;
-}
-.message__info-name {
-  color: #333333;
-  font-size: 16px;
-  font-weight: bold;
-  padding: 35px 0 12px 40px;
-}
+  &__info-date{
+    color: #999999;
+    font-size: 12px;
+    padding: 35px 0 12px 40px;
+  }
 
-.message__info-date{
-  color: #999999;
-  font-size: 12px;
-  padding: 35px 0 12px 40px;
-}
-
-.message__text {
-  color: #434A54;
-  font-size: 14px;
-  padding: 0px 0px 46px 40px;
+  &__text {
+    color: #434A54;
+    font-size: 14px;
+    padding: 0px 0px 46px 40px;
+  }
 }
 
 .form {
