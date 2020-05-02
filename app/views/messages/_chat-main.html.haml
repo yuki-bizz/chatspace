@@ -1,0 +1,38 @@
+.chat-main
+  .main-header
+    .main-header__left-box
+      .main-header__left-box__group-name
+        abc
+      .main-header__left-box__member
+        Member:
+        .main-header__left-box__member-name
+          yuki
+    .edit-btn
+      Edit
+        
+  .chat-main__message-list
+    .message
+      .message__info
+        .message__info-name
+          Yuki
+        .message__info-date
+          2020/04/26(Sun) 8:00:00
+      .message__text
+        おはよう
+    .message
+      .message__info
+        .message__info-name
+          Yuki
+        .message__info-date
+          2020/04/26(Sun) 21:00:00
+      .message__text
+        こんばんは
+
+  .form
+    %form.new_message
+      .input-box
+        %input{type: "text", class: "input-box__text", placeholder: "type a message"}
+        %label{class: "input-box__image"}
+          = icon('fas', 'image')
+          %input{type: "file", class: "input-box__image__file"}
+      %input{type: "submit", class: "submit-btn"}
