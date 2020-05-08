@@ -7,13 +7,10 @@ class MessagesController < ApplicationController
   end
 
   def create
-    # binding.pry
     @message = @group.messages.new(message_params)
     if @message.save
       respond_to do |format|
-        # format.html { redirect_to group/messages_path, notice: "メッセージを送信しました" }
         format.json
-        # binding.pry
       end
     else
       @messages = @group.messages.includes(:user)
